@@ -1,2 +1,110 @@
 @import "tailwindcss";
-@import "@heroui/styles"; 
+@import "@heroui/styles";
+
+/* Luxury Theme Configuration - Light and Dark Mode */
+
+:root {
+  --perf-bg: #fff6e5;
+  --perf-card: #ffffff;
+  --perf-border: #f7e7d4;
+  --perf-text-main: #4e2912;
+  --perf-text-muted: #7c6053;
+  --perf-gold: #e57c58;
+}
+
+:root.dark {
+  --perf-bg: #102b3a;
+  --perf-card: #0e1c28;
+  --perf-border: #1a3547;
+  --perf-text-main: #f5f6f8;
+  --perf-text-muted: #94a3b8;
+  --perf-gold: #c5a880;
+}
+
+/* Base Body Styling and Core Transitions */
+body {
+  background-color: #fff6e5;
+  color: #4e2912;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Reusable Main Background Layout Class */
+.bg-main {
+  background-color: #fff6e5;
+}
+
+/* Reusable Container and Product Card Styling Class */
+.perf-card {
+  background-color: #ffffff;
+  border: 1px solid #f7e7d4;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Reusable Major Heading and Title Text Color Class */
+.text-main {
+  color: #4e2912;
+}
+
+/* Reusable Description and Subordinate Text Color Class */
+.text-muted {
+  color: #7c6053;
+}
+
+/* Reusable Highlighted Brand and Accent Text Color Class */
+.text-gold {
+  color: #e57c58;
+}
+
+/* Reusable Core Rounded Action Button Styles */
+.btn-gold {
+  background-color: #e57c58;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+/* Button Hover State Interactive Physics Class */
+.btn-gold:hover {
+  opacity: 0.9;
+}
+
+/* Dark Mode Background Class Override */
+.dark .bg-main {
+  background-color: #102b3a;
+}
+
+/* Dark Mode Card Class Override */
+.dark .perf-card {
+  background-color: #0e1c28;
+  border-color: #1a3547;
+}
+
+/* Dark Mode Main Text Class Override */
+.dark .text-main {
+  color: #f5f6f8;
+}
+
+/* Dark Mode Muted Text Class Override */
+.dark .text-muted {
+  color: #94a3b8;
+}
+
+/* Dark Mode Gold Text Class Override */
+.dark .text-gold {
+  color: #c5a880;
+}
+
+/* Dark Mode Button Class Override */
+.dark .btn-gold {
+  background-color: #c5a880;
+  color: #102b3a;
+}
