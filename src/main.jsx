@@ -8,7 +8,7 @@ import ThemeProvider from "./context/ThemeProvider";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />,
+      <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>,
 );

@@ -2,13 +2,25 @@
 @import "@heroui/styles";
 
 /* ==========================================================================
+   Tailwind CSS v4 Direct Theme Configuration
+   ========================================================================== */
+@theme {
+  --color-perf-bg: var(--perf-bg);
+  --color-perf-card: var(--perf-card);
+  --color-perf-border: var(--perf-border);
+  --color-perf-text-main: var(--perf-text-main);
+  --color-perf-text-muted: var(--perf-text-muted);
+  --color-perf-gold: var(--perf-gold);
+  --color-perf-input-bg: var(--perf-input-bg);
+}
+
+/* ==========================================================================
    Luxury Theme CSS Variables Configuration (Light & Dark Mode)
    ========================================================================== */
-
 :root {
   /* Premium Light Mode Palette - Warm Cream & Luxury Chocolate */
   --perf-bg: #fff6e5;
-  --perf-card: #ffffff;
+  --perf-card: #f7e7d4;
   --perf-border: #f7e7d4;
   --perf-text-main: #4e2912;
   --perf-text-muted: #7c6053;
@@ -30,127 +42,15 @@
 /* ==========================================================================
    Base HTML Elements Styling & Layout Normalization
    ========================================================================== */
-
 body {
   background-color: var(--perf-bg);
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   color: var(--perf-text-main);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-/* Smooth input focus transitions across entire application */
-input,
-textarea,
-select {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-/* ==========================================================================
-   Reusable UI Utility Classes (Figma to Code Consistency)
-   ========================================================================== */
-
-/* Background Wrapper Utilities */
-.bg-main {
-  background-color: var(--perf-bg);
-}
-
-/* Luxury Card Layout (Used in Perfume Product Display Grids) */
-.perf-card {
-  background-color: var(--perf-card);
-  border: 1px solid var(--perf-border);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
-}
-
-.dark .perf-card {
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
-}
-
-/* Interactive Hover Effect for Luxury Showcase Components */
-.perf-card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px -5px rgba(78, 41, 18, 0.08);
-}
-
-.dark .perf-card-hover:hover {
-  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.5);
-}
-
-/* ==========================================================================
-   Typography Classes (Matching the Elegance of "Shop Our Wide Selection")
-   ========================================================================== */
-
-.text-main {
-  color: var(--perf-text-main);
-}
-
-.text-muted {
-  color: var(--perf-text-muted);
-}
-
-.text-gold {
-  color: var(--perf-gold);
 }
 
 /* For Headings and Promotional Hero Texts */
 .font-serif-luxury {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-/* ==========================================================================
-   Form Fields, Search Bars, and Premium Button Configurations
-   ========================================================================== */
-
-/* Search inputs and navigation elements */
-.perf-input {
-  background-color: var(--perf-input-bg);
-  border: 1px solid var(--perf-border);
-  color: var(--perf-text-main);
-  border-radius: 9999px;
-  padding: 10px 20px;
-  outline: none;
-}
-
-.perf-input:focus {
-  border-color: var(--perf-gold);
-  box-shadow: 0 0 0 2px rgba(229, 124, 88, 0.2);
-}
-
-.dark .perf-input:focus {
-  box-shadow: 0 0 0 2px rgba(197, 168, 128, 0.25);
-}
-
-/* Premium Primary Button (Add to Cart style) */
-.perf-btn-primary {
-  background-color: var(--perf-gold);
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 9999px;
-  padding: 12px 28px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-}
-
-/* Light/Dark context-specific contrast text behavior for buttons */
-.dark .perf-btn-primary {
-  color: #102b3a;
-  /* Dark text overlay on gold button for luxury readability */
-}
-
-.perf-btn-primary:hover {
-  opacity: 0.95;
-  transform: scale(1.02);
-  box-shadow: 0 4px 14px rgba(229, 124, 88, 0.3);
-}
-
-.dark .perf-btn-primary:hover {
-  box-shadow: 0 4px 14px rgba(197, 168, 128, 0.3);
 }
