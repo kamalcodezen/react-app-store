@@ -10,7 +10,7 @@ const ErrorPage = () => {
   useEffect(() => {
     // 2. Initialize AOS safely
     AOS.init({
-      duration: 800,
+      duration: 500,
       once: true,
     });
   }, []);
