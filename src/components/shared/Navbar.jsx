@@ -8,22 +8,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    {
-      path: "/",
-      label: "Home",
-    },
-    {
-      path: "/apps",
-      label: "Apps",
-    },
-    {
-      path: "/games",
-      label: "Games",
-    },
-    {
-      path: "/books",
-      label: "Books",
-    },
+    { path: "/", label: "Home" },
+    { path: "/collections", label: "Collections" },
+    { path: "/best-sellers", label: "Best Sellers" },
+    { path: "/about", label: "Our Story" },
   ];
 
   return (
